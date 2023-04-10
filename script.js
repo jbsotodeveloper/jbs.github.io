@@ -32,9 +32,11 @@ window.onscroll = function(){
 } 
 
 
+var tooltip = document.getElementById('tooltip')
+tooltip.style.display = "none";
 function copyEmail(){
     let str = 'jbsoto.developer@gmail.com'
-
+    tooltip.style.display = "block";
     return navigator.clipboard.writeText(str);
 
 }
