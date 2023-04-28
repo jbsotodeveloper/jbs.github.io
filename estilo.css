@@ -748,7 +748,7 @@ footer .arriba{
     background-color: transparent;
     font-weight: 700;
 }
-/*
+/**/
 .contenedor-header header nav ul li a:hover{
     color: #1CB698;
 }
@@ -775,7 +775,7 @@ footer .arriba{
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
-*/
+
 .tooltip{
     width: fit-content;
     display: block;
@@ -785,30 +785,3 @@ footer .arriba{
     color: #fff;
     position: relative;
 }
-
-
-nav {
-    height: 50px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
