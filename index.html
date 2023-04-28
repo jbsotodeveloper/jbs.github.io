@@ -10,13 +10,17 @@
     <link rel="icon" href="img/icon-circle.png">
 </head>
 <body>
+
+
+
+    
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="#">JBS</a>
             </div>
-            <nav id="nav">
+            <nav id="nav" class="navbar navbar-default navbar-fixed-top" >
                 <ul>
                     <li><a href="#inicio" id="nav_inicio" class="scroll-nav" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" id="nav_sobremi" class="scroll-nav" onclick="seleccionar()">SOBRE MI</a></li>                    
@@ -181,15 +185,12 @@
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>CONTACTO</h2>             
+                    
             <!-- Formulario -->
-            <div>
+            <div class="centered">
+                <h2>CONTACTO</h2>     
                 <p>¿Tienes una idea? Contáctame y hazla realidad! Te puedo asesorar y resolver tus dudas. </p>
-            </div>
-
-
-            <div>
-                
+    
                 <a onclick="copyEmail();">Contáctame!&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
                     <span class="overlay"></span>
                 </a> 

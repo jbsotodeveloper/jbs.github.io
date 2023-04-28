@@ -497,8 +497,9 @@ html{
 /* SECCION PORTFOLIO */
 .portfolio{
     background-color: #252A2E;
+    height: 75vh; 
     color: #fff;
-    padding: 50px 20px;
+    padding: 20px 20px;
 }
 .portfolio .contenido-seccion{
     max-width: 1100px;
@@ -561,6 +562,10 @@ html{
 .contacto .contenido-seccion{
     max-width: 1100px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; 
 }
 .contacto h2{
     font-size: 48px;
@@ -568,24 +573,10 @@ html{
     text-align: center;
     padding: 20px 0;
 }
-.contacto .fila{
-    display: flex;
-}
-.contacto{
-    width: 100%;
-    padding: 10px;
-    position: relative;
-}
-.contacto input, .contacto textarea{
-    display: block;
-    width: 100%;
-    padding: 18px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
-    font-size: 18px;
-}
+.contacto .contenido-seccion .centered {
+    text-align: center;
+  } 
+   
 .contacto a{
     text-decoration: none;
     cursor: pointer;
@@ -752,11 +743,12 @@ footer .arriba{
     }
 }
 
-.on {
-    color: #1CB698;
-    padding: 0 !important;
+.active {
+    color: #1CB698 !important;
+    background-color: transparent;
+    font-weight: 700;
 }
-
+/*
 .contenedor-header header nav ul li a:hover{
     color: #1CB698;
 }
@@ -764,7 +756,7 @@ footer .arriba{
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #DE5E60 !important;
+    color: #1CB698 !important;
     background-color: transparent;
     font-weight: 700;
 }
@@ -783,7 +775,7 @@ footer .arriba{
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
-
+*/
 .tooltip{
     width: fit-content;
     display: block;
@@ -793,3 +785,30 @@ footer .arriba{
     color: #fff;
     position: relative;
 }
+
+
+nav {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

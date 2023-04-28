@@ -16,22 +16,6 @@ function seleccionar(){
     menuVisible = false;
 }
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    
-        var navHeight = $(window).height() - 100;
- 
-        if ($(window).scrollTop() > navHeight) {
-            $('.navbar-default').addClass('on');
-
-            console.log("Add on class")
-        } else {
-            $('.navbar-default').removeClass('on');
-            console.log("Remove on class")
-        }
-} 
-
-
 var tooltip = document.getElementById('tooltip')
 tooltip.style.display = "none";
 function copyEmail(){
@@ -40,3 +24,25 @@ function copyEmail(){
     return navigator.clipboard.writeText(str);
 
 }
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+
+function setActiveLink() {
+  let currentSection = sections[0];
+
+  for (let i = 1; i < sections.length; i++) {
+    if (Math.abs(sections[i].offsetTop - window.pageYOffset) < Math.abs(currentSection.offsetTop - window.pageYOffset)) {
+      currentSection = sections[i];
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.href.endsWith(`#${currentSection.id}`)) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', setActiveLink);
