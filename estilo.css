@@ -526,6 +526,11 @@ html{
     width: 100%;
     display: block;
 }
+.portfolio .galeria .proyecto h3{
+    height: 45px;
+    padding: 8px;
+    margin: 16px;
+}
 .portfolio .galeria .proyecto .overlay{
     position: absolute;
     top: 0;
@@ -814,6 +819,7 @@ footer .arriba{
   }
   
   .modal-title {
+    font-size: 1.2rem!important;
     margin-top: 0;
     color: #FFF;
   }
@@ -833,3 +839,6 @@ footer .arriba{
     margin-top: 20px;
   }
   
+.centered {
+    text-align: center;
+}
