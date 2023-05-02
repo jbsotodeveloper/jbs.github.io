@@ -75,12 +75,25 @@ const modals = [
     image: 'img/fotografia.jpeg',
     title: 'Fotografía',
     description: 'Fotografía de paisajes, bodas, bautizos, etc.'
+  },
+  {
+    image: 'img/drone.jpeg',
+    title: 'Fotografía y Videos aéreos con Drones',
+    description: 'Fotografías y videos aéreos'
+  }
+  ,
+  {
+    image: 'img/cursos.jpeg',
+    title: 'Auditorias, Cursos, Clases y Tutoriales',
+    description: 'Aprende programación de forma dinámica, individual o grupal, apoyo en proyectos, auditorias de sistemas'
   }
 ];
 
 modalButtons.forEach(button => {
   button.addEventListener('click', () => {
     // Get the index of the clicked button
+    document.body.classList.add('modal-open');
+
     const index = button.getAttribute('data-index');
 
     // Get the corresponding data from the modals array
@@ -99,6 +112,7 @@ modalButtons.forEach(button => {
 modalClose.addEventListener('click', () => {
   // Hide the modal overlay
   modalOverlay.style.display = 'none';
+  document.body.classList.remove('modal-open');
 });
 
 
