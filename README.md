@@ -1,2 +1,2 @@
-# jbs.github.io
+# jbsdev.github.io
 Sitio web personal
