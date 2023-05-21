@@ -52,7 +52,7 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const modalImage = document.querySelector('.modal-image');
 const modalTitle = document.querySelector('.modal-title');
 const modalDescription = document.querySelector('.modal-description');
-const modalClose = document.querySelector('.modal-close');
+const modalClose = document.querySelectorAll('.modal-close');
 
 // Create an array of objects to store the data for each modal
 const modals = [
@@ -109,10 +109,12 @@ modalButtons.forEach(button => {
   });
 });
 
-modalClose.addEventListener('click', () => {
-  // Hide the modal overlay
-  modalOverlay.style.display = 'none';
-  document.body.classList.remove('modal-open');
+modalClose.forEach(button => {
+  button.addEventListener('click', () => {
+    // Hide the modal overlay
+    modalOverlay.style.display = 'none';
+    document.body.classList.remove('modal-open');
+  });
 });
 
 
