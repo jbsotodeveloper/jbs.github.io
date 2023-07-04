@@ -594,7 +594,7 @@ html{
     color: #fff;
     font-size: 18px;
 }
-.contacto button{
+.contacto a{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -607,7 +607,7 @@ html{
     position: relative;
     z-index: 10;
 }
-.contacto button .overlay{
+.contacto a .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -617,7 +617,7 @@ html{
     z-index: -1;
     transition: 1s;
 }
-.contacto button:hover .overlay{
+.contacto a:hover .overlay{
     width: 100%;
 }
 
