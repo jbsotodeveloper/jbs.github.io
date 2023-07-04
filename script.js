@@ -15,15 +15,46 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-
-var tooltip = document.getElementById('tooltip')
-tooltip.style.display = "none";
+ 
 function copyEmail(){
-    let str = 'jbsoto.developer@gmail.com'
-    tooltip.style.display = "block";
-    return navigator.clipboard.writeText(str);
-
+    
+      // Gather form data
+      let nombre = $("#nombre").val();
+      let email = $("#email").val();
+      let idea = $("#idea").val();
+      let description = $("#description").val();
+      let recaptchaResponse = grecaptcha.getResponse();
+      // Create an object with the form data
+      let formData = {
+        idea: idea,
+        description: description,
+        nombre: nombre,
+        email: email,
+        recaptchaResponse: recaptchaResponse
+      };
+      console.log(formData);
+      return formData;
+ 
+    // Send the form data to the backend using AJAX with jQuery
+    $.ajax({
+      url: "/submit-form",
+      type: "POST",
+      data: formData,
+      headers: {
+        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+      },
+      success: function(response) {
+        // Handle the response from the backend (if needed)
+        console.log(response);
+ 
+      },
+      error: function(error) {
+        // Handle any errors that occur during the AJAX request
+        console.error(error);
+      }
+    });
 }
+ 
 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
@@ -116,5 +147,8 @@ modalClose.forEach(button => {
     document.body.classList.remove('modal-open');
   });
 });
+
+ 
+
 
 

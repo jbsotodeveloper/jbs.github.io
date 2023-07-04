@@ -219,26 +219,28 @@
 
 
     </section>
-    <!-- SECCION CONTACTO -->
-    <section id="contacto" class="contacto">
+
+     <!-- SECCION CONTACTO -->
+     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-                    
-            <!-- Formulario -->
+            <h2>CONTACTO</h2>
             <div class="centered">
-                <h2>CONTACTO</h2>     
-                <p>¿Tienes una idea? Contáctame y hazla realidad! Te puedo asesorar y resolver tus dudas. </p>
+                <!-- Formulario -->
+                <div class="col">
+                    <form id="emailForm" >                
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tú Nombre">
+                        <input type="text" id="numero" name="numero" required placeholder="Número telefónico">
+                        <input type="text" id="" name="email" required placeholder="Dirección de correo">
+                        <input type="text" id="titulo_idea" name="titulo_idea" required placeholder="Tú Idea">
+                        <textarea name="" id="descripcion_idea" name="descripcion_idea" cols="30" rows="10" required placeholder="Descripción de Idea"></textarea>
+                        <div class="g-recaptcha" data-sitekey="6Lest7YmAAAAALd23lDtaIX97MGiNc2Rs3Q1K-uU"></div>
     
-                <a onclick="copyEmail();">Contáctame!&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
-                    <span class="overlay"></span>
-                </a> 
-                <div id="tooltip" class="tooltip">
-                    <div class="tooltiptext">
-                        Email Copiado!
-                    </div>
-                </div>
-            </div>   
-            
-             
+                        <a onclick="copyEmail();">Contáctame!&nbsp;&nbsp;<i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </a> 
+                    </form>
+                </div>      
+            </div>
         </div>
     </section>
 
@@ -254,6 +256,7 @@
     </footer>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="script.js"></script>
 </body>
 </html>
