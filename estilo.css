@@ -127,6 +127,7 @@ html{
 
 }
 .sobremi .contenido-seccion p{
+    vertical-align: middle;
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
